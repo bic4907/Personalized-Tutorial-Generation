@@ -1,0 +1,17 @@
+{
+  "levelName": "cross_1",
+  "moveList": [
+    {
+      "moveIndex": 75,
+      "type": "HorizontalPiece"
+    },
+    {
+      "moveIndex": 83,
+      "type": "HorizontalPiece"
+    },
+    {
+      "moveIndex": 99,
+      "type": "HorizontalPiece"
+    }
+  ]
+}

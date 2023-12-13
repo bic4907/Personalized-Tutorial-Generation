@@ -1,0 +1,9 @@
+{
+    "levelName": "vertical_0",
+    "moveList": [
+        {
+            "moveIndex": 15,
+            "type": "VerticalPiece"
+        }
+    ]
+}

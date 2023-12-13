@@ -1,0 +1,25 @@
+{
+  "levelName": "bomb_0",
+  "moveList": [
+    {
+      "moveIndex": 38,
+      "type": "VerticalPiece"
+    },
+    {
+      "moveIndex": 42,
+      "type": "BombPiece"
+    },
+    {
+      "moveIndex": 47,
+      "type": "RocketPiece"
+    },
+    {
+      "moveIndex": 64,
+      "type": "RocketPiece"
+    },
+    {
+      "moveIndex": 104,
+      "type": "HorizontalPiece"
+    }
+  ]
+}

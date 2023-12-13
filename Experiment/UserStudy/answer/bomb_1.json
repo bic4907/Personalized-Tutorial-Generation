@@ -1,0 +1,13 @@
+{
+  "levelName": "bomb_1",
+  "moveList": [
+    {
+      "moveIndex": 46,
+      "type": "VerticalPiece"
+    },
+    {
+      "moveIndex": 107,
+      "type": "BombPiece"
+    }
+  ]
+}

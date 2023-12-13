@@ -1,0 +1,61 @@
+{
+    "bomb_0": {
+        "38": false,
+        "42": true,
+        "47": false,
+        "64": false,
+        "104": false
+    },
+    "bomb_1": {
+        "46": false,
+        "107": true
+    },
+    "cross_0": {
+        "24": true,
+        "83": false,
+        "91": false,
+        "115": false
+    },
+    "cross_1": {
+        "18": true,
+        "75": false,
+        "83": false,
+        "99": false
+    },
+    "horizon_0": {
+        "17": false,
+        "121": true
+    },
+    "horizon_1": {
+        "25": false,
+        "124": true
+    },
+    "rainbow_0": {
+        "26": false,
+        "44": true,
+        "54": false
+    },
+    "rainbow_1": {
+        "9": false,
+        "46": false,
+        "53": false,
+        "54": false,
+        "69": false,
+        "116": true,
+        "124": true
+    },
+    "rocket_0": {
+        "51": false,
+        "113": true
+    },
+    "rocket_1": {
+        "43": true,
+        "81": true
+    },
+    "vertical_0": {
+        "15": true
+    },
+    "vertical_1": {
+        "25": true
+    }
+}

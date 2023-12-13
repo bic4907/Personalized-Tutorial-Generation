@@ -1,0 +1,17 @@
+{
+    "levelName": "horizon_0",
+    "moveList": [
+        {
+            "moveIndex": 17,
+            "type": "VerticalPiece"
+        },
+        {
+            "moveIndex": 83,
+            "type": "BombPiece"
+        },
+        {
+            "moveIndex": 121,
+            "type": "HorizontalPiece"
+        }
+    ]
+}

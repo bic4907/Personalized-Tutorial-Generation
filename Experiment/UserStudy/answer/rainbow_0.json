@@ -1,0 +1,17 @@
+{
+  "levelName": "rainbow_0",
+  "moveList": [
+    {
+      "moveIndex": 26,
+      "type": "VerticalPiece"
+    },
+    {
+      "moveIndex": 44,
+      "type": "RainbowPiece"
+    },
+    {
+      "moveIndex": 54,
+      "type": "RocketPiece"
+    }
+  ]
+}

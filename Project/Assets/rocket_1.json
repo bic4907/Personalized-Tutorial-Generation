@@ -1,0 +1,13 @@
+{
+    "levelName": "rocket_1",
+    "moveList": [
+        {
+            "moveIndex": 43,
+            "type": "RocketPiece"
+        },
+        {
+            "moveIndex": 81,
+            "type": "RocketPiece"
+        }
+    ]
+}
