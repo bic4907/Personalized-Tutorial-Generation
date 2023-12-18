@@ -12,6 +12,9 @@ Herein, there are three comparisons for the tutorial generation. Note that the g
 With the below demonstrations, you can compare the tutorial generation has capable of improving the player's learning of game mechanics.
 The personalized tutorial generation has capable of capturing your learning progress and generating the tutorial contents based on your knowledge status.
 
+The text label on the top-left corner of the game scene indicates the generator type and the currently estimated player knowledge state.
+Note that the label is not visible in the user study experiment.
+
 | Generator | Description                                                                                                         | Demo       |
 |-----------|---------------------------------------------------------------------------------------------------------------------|------------|
 | `Random`  | Generates random elements with no specific algorithm. The logic of the game transtion is same to the original game. | [Demo URL]() |
