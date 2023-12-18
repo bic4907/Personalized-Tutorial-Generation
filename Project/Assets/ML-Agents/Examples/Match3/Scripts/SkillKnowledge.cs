@@ -14,7 +14,7 @@ namespace Unity.MLAgentsExamples
         public Dictionary<PieceType, int> SeenMatches;
         public Dictionary<PieceType, int> SeenDestroys;
 
-        
+
         public PieceType[] PieceTypes = new PieceType[] {PieceType.HorizontalPiece, PieceType.VerticalPiece, PieceType.CrossPiece, PieceType.BombPiece, PieceType.RocketPiece, PieceType.RainbowPiece};
 
         public int DefaultTargetValue = 5;
@@ -38,15 +38,15 @@ namespace Unity.MLAgentsExamples
             SeenMatches.Add(PieceType.NormalPiece, 0);
             SeenDestroys.Add(PieceType.NormalPiece, 0);
         }
-        
-        public SkillKnowledge(int HorizontalPieceCount, 
+
+        public SkillKnowledge(int HorizontalPieceCount,
                             int VerticalPieceCount,
                             int CrossPieceCount,
                             int BombPieceCount,
                             int RocketPieceCount,
                             int RainbowPieceCount) : this()
         {
-            
+
             TargetMatchCounts[PieceType.HorizontalPiece] = HorizontalPieceCount;
             TargetMatchCounts[PieceType.VerticalPiece] = VerticalPieceCount;
             TargetMatchCounts[PieceType.CrossPiece] = CrossPieceCount;
@@ -104,9 +104,9 @@ namespace Unity.MLAgentsExamples
             {
                 return CurrentMatchCounts[pieceType] >= (int)Math.Ceiling(TargetMatchCounts[pieceType] * ratio);
             }
-            
+
         }
-        
+
         public bool IsAllBlockReachTarget()
         {
             foreach (PieceType pieceType in PieceTypes)
@@ -146,7 +146,7 @@ namespace Unity.MLAgentsExamples
             }
             return Math.Max(Math.Min(percentile, 1.0f), 0.0f);
         }
-        
+
         public SkillKnowledge DeepCopy()
         {
             SkillKnowledge result = new SkillKnowledge();
@@ -172,9 +172,22 @@ namespace Unity.MLAgentsExamples
                 result += pieceType.ToString() + ": " + CurrentMatchCounts[pieceType] + "/" + TargetMatchCounts[pieceType] + "/"  + ManualCheck[pieceType] + " | ";
             }
             result = result.Remove(result.Trim().Length - 2);
-            
+
             return result;
         }
+
+        public string ToManualString()
+        {
+            string result = "(SkillKnowledge)\n";
+            foreach (PieceType pieceType in PieceTypes)
+            {
+                result += pieceType.ToString() + ": " + ManualCheck[pieceType] + "\n";
+            }
+
+            return result;
+
+        }
+
 
     }
 
@@ -183,15 +196,15 @@ namespace Unity.MLAgentsExamples
 
         private static SkillKnowledgeExperimentSingleton m_Instance;
 
-        public static SkillKnowledgeExperimentSingleton Instance { 
+        public static SkillKnowledgeExperimentSingleton Instance {
             get
-            { 
-                if (m_Instance == null) 
-                {   
+            {
+                if (m_Instance == null)
+                {
                     m_Instance = new SkillKnowledgeExperimentSingleton();
                 }
                 return m_Instance;
-            } 
+            }
             set { value = m_Instance; }
         }
 
@@ -228,7 +241,7 @@ namespace Unity.MLAgentsExamples
             SkillKnowledges.Add(new SkillKnowledge(11, 7, 1, 1, 8, 3));
             SkillKnowledges.Add(new SkillKnowledge(10, 8, 7, 4, 9, 5));
             SkillKnowledges.Add(new SkillKnowledge(4, 9, 1, 2, 3, 2));
-            
+
             SkillKnowledges.Add(new SkillKnowledge(2, 2, 2, 2, 2, 2)); // Dummy
         }
 

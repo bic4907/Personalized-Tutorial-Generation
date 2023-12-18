@@ -102,6 +102,10 @@ namespace Unity.MLAgentsExamples
         public List<string> m_KnowledgeEventList;
 
         private int LastPCGTime = 0;
+
+        // Demo
+        private TextMeshProUGUI m_DemoText;
+        public bool IsDemo = false;
     
 
         private string GetMethodPostfix()
@@ -147,8 +151,10 @@ namespace Unity.MLAgentsExamples
             m_presetManager = GetComponent<BoardPresetManager>();
             m_KnowledgeEventList = new List<string>();
 
-            SetRandomGenerationMethod();
-
+            if (!IsDemo) 
+            {
+                SetRandomGenerationMethod();
+            }
             if (SaveFirebaseLog)
             {
                 // Add FirebaseLogger component in this game objct
@@ -241,7 +247,9 @@ namespace Unity.MLAgentsExamples
 
             // Sample one of method and write the case
             string _method = _methods[_random.Next() % _methods.Length];
-            
+
+
+
             switch(_method)
             {
                 case "mcts_knowledge":
@@ -324,6 +332,10 @@ namespace Unity.MLAgentsExamples
                 m_TutoringUIManager.SetNumber(MaxMoves);
                 m_TutoringUIManager.SetActive(true);
             }
+            if (IsDemo && GameObject.Find("DemoText"))
+            {
+                m_DemoText = GameObject.Find("DemoText").GetComponent<TextMeshProUGUI>();
+            }
         }
 
         public void OnEpisodeBegin()
@@ -399,6 +411,49 @@ namespace Unity.MLAgentsExamples
                 }
              
             }
+
+            if (IsDemo) UpdateDemoText();
+
+        }
+
+        private void UpdateDemoText()
+        {
+            Debug.Log("UpdateDemoText");
+            // print the generative method and the psm state
+            string _text = "[Generator Type]\n";
+
+            // if generatorType is MCTS, and the reward type is knowledge, print MCTS-PSM
+            if (generatorType == GeneratorType.MCTS && generatorRewardType == GeneratorReward.Knowledge)
+            {
+                _text += "MCTS-PSM";
+            }
+            else if (generatorType == GeneratorType.MCTS && generatorRewardType == GeneratorReward.Score)
+            {
+                _text += "MCTS-GEN";
+            }
+            else if (generatorType == GeneratorType.Random)
+            {
+                _text += "Random";
+            }
+
+            if (generatorType == GeneratorType.MCTS && generatorRewardType == GeneratorReward.Knowledge)
+            {
+                // print m_SkillKnowledge
+                _text += "\n\n";
+                _text += "[Estimated Knowledge Status]\n";
+                _text += m_SkillKnowledge.ToManualString();
+            } else
+            {
+                _text += "\n\n";
+                _text += "[Estimated Knowledge Status]\n";
+                _text += "N/A";
+            }
+
+            _text += "\n\n";
+            _text += "[Game Status]\n";
+            _text += m_CurrentState.ToString();
+
+            m_DemoText.text = _text;    
 
         }
 

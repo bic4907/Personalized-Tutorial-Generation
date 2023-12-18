@@ -5,7 +5,9 @@ using System.IO;
 using Newtonsoft.Json.Linq;
 using Unity.MLAgents.Integrations.Match3;
 using Unity.MLAgentsExamples;
-
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 //namespace Unity.MLAgentsExamples
 
 public class GameSnapshotShooter : MonoBehaviour
@@ -300,7 +302,9 @@ public class GameSnapshotShooter : MonoBehaviour
                     else if (CurrentDemostrations == PSM_Demostrations)
                     {
                         // Quit Application also Editor
+                    #if UNITY_EDITOR
                         UnityEditor.EditorApplication.isPlaying = false;
+                    #endif
                     }
                     CurrentIndex = 0;
                 }
