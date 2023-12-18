@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/ML-Agents/Examples/Match3/Scenes/Match3.unity
     guid: 2e09c5458f1494f9dad9cd6d09dff964
-  - enabled: 0
+  - enabled: 1
     path: Assets/ML-Agents/Examples/Match3/Scenes/Match3Web.unity
     guid: a95302082e7d8bc46af85f733934a9ca
-  - enabled: 1
+  - enabled: 0
     path: Assets/ML-Agents/Examples/Match3/Scenes/Match3Snapshot.unity
     guid: 2f107f611af7c8148bc6cfc0ee68d8a9
   m_configObjects: {}

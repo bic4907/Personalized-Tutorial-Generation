@@ -15,11 +15,11 @@ The personalized tutorial generation has capable of capturing your learning prog
 The text label on the top-left corner of the game scene indicates the generator type and the currently estimated player knowledge state.
 Note that the label is not visible in the user study experiment.
 
-| Generator | Description                                                                                                         | Demo       |
-|-----------|---------------------------------------------------------------------------------------------------------------------|------------|
-| `Random`  | Generates random elements with no specific algorithm. The logic of the game transtion is same to the original game. | [Demo URL]() |
-| `MCTS-GEN`| Applies Monte Carlo Tree Search for the learning context generation without the player knowledge state.             | [Demo URL]() |
-| `MCTS-PSM`| Applies Monte Carlo Tree Search for the learning context generation with the player knowledge state.                | [Demo URL]() |
+| Generator | Description                                                                                                         | Demo                                                                                            |
+|-----------|---------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| `Random`  | Generates random elements with no specific algorithm. The logic of the game transtion is same to the original game. | [Demo](https://bic4907.github.io/Personalized-Tutorial-Generation/Demo/Web_Random/?target=_blank)   |
+| `MCTS-GEN`| Applies Monte Carlo Tree Search for the learning context generation without the player knowledge state.             | [Demo](https://bic4907.github.io/Personalized-Tutorial-Generation/Demo/Web_MCTS-GEN/?target=_blank) |
+| `MCTS-PSM`| Applies Monte Carlo Tree Search for the learning context generation with the player knowledge state.                | [Demo](https://bic4907.github.io/Personalized-Tutorial-Generation/Demo/Web_MCTS-PSM?target=_blank/) |
 
 
 ## Directory Structure
